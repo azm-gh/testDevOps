@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: FileTransform@1
   inputs:
-    folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    folderPath: '$(System.DefaultWorkingDirectory)'
     enableXmlTransform: true
     xmlTransformationRules: '-transform **\*.Release.config -xml **\*.config -result test.xml'
     fileType: 'xml'
