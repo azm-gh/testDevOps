@@ -23,3 +23,5 @@ steps:
     enableXmlTransform: true
     xmlTransformationRules: '-transform **\*.Release.config -xml **\*.config -result test.xml'
     fileType: 'xml'
+
+    
