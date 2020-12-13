@@ -17,3 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: FileTransform@1
+  inputs:
+    folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    enableXmlTransform: true
+    xmlTransformationRules: '-transform **\*.Release.config -xml **\*.config -result test.xml'
+    fileType: 'xml'
