@@ -21,7 +21,7 @@ steps:
   inputs:
     folderPath: '$(System.DefaultWorkingDirectory)'
     enableXmlTransform: true
-    xmlTransformationRules: '-transform **\Release.config -xml **\Web.config -result result.xml'
+    xmlTransformationRules: '-transform **\Release.config -xml **\Web.config -result result.config'
     fileType: 'xml'
 - task: Bash@3
   inputs:
