@@ -23,5 +23,12 @@ steps:
     enableXmlTransform: true
     xmlTransformationRules: '-transform **\Release.config -xml **\Web.config -result result.xml'
     fileType: 'xml'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      cat result.config
+    
 
     
